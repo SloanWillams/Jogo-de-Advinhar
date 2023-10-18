@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jogo de Advinhações</title>
+</head>
+
+<body onload="OrdenarNúmeroSecreto()">
+  <main id="Tela Inicial">
+    <div id="Título">
+      <h1>Tente advinhar o número a ser descoberto</h1>
+    </div>
+    <p class="centro" id="dica">Digite algum número entre 1 e 5 e descubra qual é</p>
+    <section class="Conteúdos">
+      <input type="number" step="1" min="1" max="5" name="inputNumero" id="inputNumero" class="input da animações"
+        onblur="ValidarNumeroDigitado(this.value)" onclick="TocarMusicaDeFundo(); AtivarBtnChutar();" />
+      <button id="BtnChutar" class="botao" onclick="Jogar()">Chutar</button>
+      <br>
+      <button id="BtnSom" class="botao" onclick="AtivarDesativarMusica()">&#9835;</button>
+    </section>
+    <p class="centro" id="aviso"></p>
+  </main>
+
+  <!-- Audio musica de fundo -->
+  <audio preload autoplay loop id="TocarMusicaDeFundo" src="som-de-suspense.mp3"></audio>
+
+  <!--Link para o JS Externo-->
+  <script src="Jogo de Advinhações.js"></script>
+
+</body>
+
+</html>
